@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="quiz">
+        <div class="heading">
+            <h1>Quiz berhadiah</h1>
+        </div>
+        <div class="question">
+            <p>1. Dimana tempat pertama kali kita ketemu?</p>
+            <button onclick="selectAnswer(0, 'Mixue')">Mixue</button>
+            <button onclick="selectAnswer(0, 'Perpus-Mercu')">Perpus Mercu</button>
+            <button onclick="selectAnswer(0, 'Indomart-Rektorat')">Indomaret Rektorat</button>
+            <button onclick="selectAnswer(0, 'LP')">LP</button>
+        </div>
+        <div class="question">
+            <p>2. Dimana pertama kali aku ngeliat kamu?</p>
+            <button onclick="selectAnswer(1, 'Perpus Mercu')">Perpus Mercu</button>
+            <button onclick="selectAnswer(1, 'LP')">LP</button>
+            <button onclick="selectAnswer(1, 'IT-Day')">IT Day</button>
+            <button onclick="selectAnswer(1, 'Mabim')">Mabim</button>
+        </div>
+        <div class="question">
+            <p>3. Tanggal berapa pertama kali aku ngeDM kamu?</p>
+            <button onclick="selectAnswer(2, '15-September')">15 September</button>
+            <button onclick="selectAnswer(2, '14-September')">14 September</button>
+            <button onclick="selectAnswer(2, '14-Agustus')">14 Agustus</button>
+            <button onclick="selectAnswer(2, '29-September')">29 September</button>
+        </div>
+        <div class="question">
+            <p>4. Dimana tempat first date setelah jadian?</p>
+            <button onclick="selectAnswer(3, 'Mixue')">Mixue</button>
+            <button onclick="selectAnswer(3, 'Nonton-di-Sedayu')">Nonton di Sedayu</button>
+            <button onclick="selectAnswer(3, 'Lekker')">Lekker</button>
+            <button onclick="selectAnswer(3, 'Indomaret-Rektorat')">Indomaret Rektorat</button>
+        </div>
+        <div class="question">
+            <p>5. Dimana tempat aku nembak kamu?</p>
+            <button onclick="selectAnswer(4, 'Perpus-Mercu')">Perpus Mercu</button>
+            <button onclick="selectAnswer(4, 'LP')">LP</button>
+            <button onclick="selectAnswer(4, 'Belakang-Sasana')">Belakang Sasana</button>
+            <button onclick="selectAnswer(4, 'Indomaret-Rektorat')">Indomaret Rektorat</button>
+        </div>
+        <button onclick="submitQuiz()">Submit Answers</button>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <p id="modal-message"></p>
+                <button id="modal-button" onclick="closeModal()">OK</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

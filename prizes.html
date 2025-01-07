@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prize Selection</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Hadiah Buat Laura!</h1>
+        <p>Selamat karena kamu berhasil menjawab pertanyaan dengan benar, nih aku kasi hadiah buat kamu pilih:</p>
+        <div class="prize-selection">
+            <div class="prize" onclick="selectPrize('Gift 1')">
+                <h2>Gift 1</h2>
+                <img src="image/sushi-go.png" alt="Gift 1">
+                <p>Traktir makan di sushi go</p>
+            </div>
+            <div class="prize" onclick="selectPrize('Gift 2')">
+                <h2>Gift 2</h2>
+                <img src="image/shopee.png" alt="Gift 2">
+                <p>CO 1 Barang di keranjang shopee kamu</p>
+            </div>
+            <div class="prize" onclick="selectPrize('Gift 3')">
+                <h2>Gift 3</h2>
+                <img src="image/request.png" alt="Gift 3">
+                <p>Request 1 barang yang kamu pengen</p>
+            </div>
+            <div class="prize" onclick="selectPrize('Gift 4')">
+                <h2>Gift 4</h2>
+                <img src="image/tanda-tanya.png" alt="Gift 4">
+                <p>Terima hadiah random dari aku</p>
+            </div>
+        </div>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <p id="modal-message"></p>
+            <button id="modal-button" class="button">OK</button>
+        </div>
+    </div>
+</body>
+</html>

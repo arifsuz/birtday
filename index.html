@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Main Page -->
+    <div class="main-page">
+        <div>
+            <h1>Happy Birthday, Laura Janisa Azahra</h1>
+            <button onclick="navigateTo('gallery.html')">Next</button>
+        </div>
+    </div>
+
+    <!-- Music Widget Icon -->
+    <div id="music-widget-icon" class="music-widget-icon" onclick="toggleMusicWidget()">
+        🎵
+    </div>
+
+    <!-- Music Widget -->
+    <div id="music-widget" class="music-widget">
+        <audio id="audio-player">
+            <source id="audio-source" src="music/song1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <div class="music-controls">
+            <button onclick="previousMusic()">⏮️</button>
+            <button onclick="togglePlayPause()">⏯️</button>
+            <button onclick="nextMusic()">⏭️</button>
+        </div>
+        <select id="music-selector" onchange="changeMusic()">
+            <option value="music/Jamrud-Selamat-Ulang-Tahu.mp3">Jamrud - Selamat Ulang Tahun</option>
+            <option value="music/ANDMESH-ANUGERAH-TERINDAH.mp3">ANDMESH - ANUGERAH TERINDAH</option>
+            <option value="music/Jaz-Bersamamu.mp3">Jaz - Bersamamu</option>
+            <option value="music/Kita-Bikin-Romantis-Maliq&D'Essentials.mp3">Kita Bikin Romantis - Maliq & D'Essentials</option>
+        </select>
+    </div>
+</body>
+</html>

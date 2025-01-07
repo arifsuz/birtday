@@ -1,0 +1,485 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #0d0d0d;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+.container {
+    text-align: center;
+    padding: 50px;
+}
+
+.main-page h1 {
+    font-size: 4em;
+    text-align: center;
+    text-shadow: 2px 2px 5px #ff69b4;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    0% { text-shadow: 2px 2px 5px #ff69b4; }
+    100% { text-shadow: 2px 2px 20px #ff1493; }
+}
+
+.main-page {
+    background: url('image/background-image.png') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-page button {
+    display: block;
+    margin: 0 auto;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background: #ff69b4;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.main-page button:hover {
+    background: #ff1493;
+}
+
+.music-widget-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255, 105, 180, 0.8);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5em;
+    z-index: 1000;
+}
+
+.music-widget {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.music-controls {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.music-controls button {
+    padding: 10px;
+    font-size: 1.5em;
+    background: rgba(255, 105, 180, 0.8);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.music-controls button:hover {
+    background: rgba(255, 20, 147, 0.8);
+}
+
+#music-selector {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 1em;
+    background: rgba(255, 105, 180, 0.8);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#music-selector:hover {
+    background: rgba(255, 20, 147, 0.8);
+}
+
+/* Gallery.HTML */
+.heading h1 {
+    font-size: 4em;
+    text-align: center;
+    text-shadow: 2px 2px 5px #ff69b4;
+    animation: glow 1s ease-in-out infinite alternate;
+    position: relative;
+    z-index: 1;
+}
+
+.heading::after {
+    content: '';
+    position: absolute;
+    top: 100px; /* Adjust this value to place the line below the h1 */
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #ff69b4;
+    z-index: 0;
+}
+
+.timeline {
+    position: relative;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 1px; /* Adjust this value to start after the h1 */
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background: #ff69b4;
+    transform: translateX(-50%);
+    height: calc(100% - 250px); /* Adjust the height to stop before the last timeline item */
+}
+
+.timeline-item, #current {
+    width: 100px;
+    height: auto;
+    margin: 100px 10px 20px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    animation: border-glow 1.5s ease-in-out infinite alternate;
+}
+
+.timeline-item, #upcoming {
+    width: 100px;
+    height: auto;
+    margin: 50px 10px 20px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    animation: border-glow 1.5s ease-in-out infinite alternate;
+}
+
+#current::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -76px;
+    width: 20px;
+    height: 20px;
+    background: #ff69b4;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#upcoming::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -47%;
+    width: 20px;
+    height: 20px;
+    background: #ff69b4;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.timeline-item:nth-child(odd) {
+    align-self: flex-start;
+    margin-left: 20%;
+}
+
+.timeline-item:nth-child(even) {
+    align-self: flex-end;
+    margin-right: 20%;
+}
+
+.timeline-item h3 {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.timeline-item p {
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.timeline-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes border-glow {
+    0% { box-shadow: 0 0 10px rgba(255, 105, 180, 0.5); }
+    100% { box-shadow: 0 0 20px rgba(255, 20, 147, 1); }
+}
+
+.timeline button {
+    display: block;
+    margin: 0 auto;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background: #ff69b4;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.timeline button:hover {
+    background: #ff1493;
+}
+
+/* QUIZ SECTION */
+.quiz {
+    padding: 20px;
+    text-align: left;
+}
+
+.quiz .question {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.quiz button {
+    padding: 10px 20px;
+    margin: 10px 5px;
+    background: #ff69b4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.quiz button:hover {
+    background: #ff1493;
+}
+
+.quiz button.selected {
+    background: #ff0000;
+}
+
+.quiz .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.quiz .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 500px;
+    text-align: center;
+}
+
+.quiz .modal-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.quiz .modal #modal-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.quiz .modal #modal-button:hover {
+    background-color: #45a049;
+}
+
+/* PRIZE SELECTION */
+.prize-selection {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.prize-selection .prize {
+    padding: 20px;
+    border: 2px dashed #ff69b4;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    text-align: center;
+    max-width: 150px;
+    margin: 10px;
+    animation: color-glow 1.5s ease-in-out infinite alternate;
+}
+
+.prize:hover {
+    transform: scale(1.1);
+    animation: color-glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes color-glow {
+    0% { box-shadow: 0 0 10px rgba(255, 105, 180, 0.5); }
+    100% { box-shadow: 0 0 20px rgba(255, 20, 147, 1); }
+}
+
+.prize img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.prize p {
+    font-size: 1em;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 500px;
+    text-align: center;
+}
+
+.modal-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#modal-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#modal-button:hover {
+    background-color: #45a049;
+}
+
+/* FINAL PAGE */
+.final-page {
+    text-align: center;
+    padding: 60px;
+}
+
+.final-page img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.final-page h1, .final-page p {
+    animation: text-glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes text-glow {
+    0% { text-shadow: 0 0 10px rgba(255, 105, 180, 0.5); }
+    50% { text-shadow: 0 0 15px rgb(236, 28, 139); }
+    100% { text-shadow: 0 0 20px rgb(255, 0, 234); }
+}
+
+/* Media Queries for iPhone 11 Pro Max */
+@media only screen and (max-width: 1242px) {
+    .container {
+        padding: 20px;
+    }
+
+    .main-page h1 {
+        font-size: 2.5em;
+    }
+
+    .main-page button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    .timeline {
+        padding: 20px;
+    }
+
+    .heading h1 {
+        font-size: 2.5em;
+    }
+
+    .timeline-item {
+        width: 80px;
+        margin: 50px 0;
+        padding: 5px;
+    }
+
+    .quiz .question {
+        font-size: 1.2em;
+    }
+
+    .quiz button {
+        padding: 8px 16px;
+        margin: 8px 4px;
+    }
+
+    .prize-selection {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .prize-selection .prize {
+        margin-bottom: 20px;
+    }
+
+    .final-page img {
+        width: 150px;
+        height: 150px;
+    }
+}
