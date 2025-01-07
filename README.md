@@ -1,5 +1,3 @@
-Collecting workspace information
-
 # Birthday Website Documentation
 
 ## Overview
