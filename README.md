@@ -2,121 +2,150 @@
 
 ## Overview
 
-The Birthday Website is a project designed to celebrate a loved one's birthday with interactive features such as a gallery, quiz, and prize selection. The website is built using HTML, CSS, and JavaScript.
+The Birthday Website is an interactive celebration project featuring a gallery, quiz, and prize selection for a birthday surprise. Built with HTML, CSS, and JavaScript.
 
 ## Project Structure
 
-The project is organized into the following structure:
-
 ```
 birthday-website/
-├── README.md
-├── final.html
-├── gallery.html
-├── image/
-├── index.html
-├── music/
-├── prizes.html
-├── quiz.html
-├── script.js
-└── style.css
+├── image/                     # Image assets directory
+├── music/                     # Audio files directory
+├── index.html                 # Main HTML file
+├── style.css                  # Stylesheet
+├── script.js                  # JavaScript logic
+└── README.md                  # Documentation
 ```
 
-## Features
+## Core Files and Their Functions
 
-### Main Page
-
-- **File**: 
+### 
 
 index.html
 
 
-- **Description**: Contains animated background images and birthday wishes with a navigation button to the gallery.
+
+Main HTML file containing the website structure:
+- `main-page`: Welcome section with birthday message
+- `gallery-page`: Photo timeline with memories
+- `quiz-page`: Interactive quiz section
+- `prizes-page`: Prize selection interface
+- `final-page`: Closing message and wishes
+- Music widget integration
+
+### 
+
+style.css
+
+
+
+Stylesheet containing:
+- Base styles and layouts
+- Animations (glow, border-glow, text-glow)
+- Timeline styling
+- Quiz interface design
+- Prize selection layout
+- Music widget styling
+- Responsive design for mobile devices
+
+### 
+
+script.js
+
+
+
+JavaScript functionality:
+
+```javascript
+// Quiz Management
+selectAnswer(questionIndex, answer)    // Handle answer selection
+submitQuiz()                          // Process quiz results
+showModal(message, redirectUrl)       // Display result modals
+
+// Prize Selection
+selectPrize(prize)                    // Handle prize choices
+closeModal()                          // Close modal windows
+
+// Music Player
+toggleMusicWidget()                   // Show/hide music player
+togglePlayPause()                     // Control music playback
+previousMusic()                       // Play previous track
+nextMusic()                          // Play next track
+changeMusic()                        // Change selected track
+
+// Navigation
+navigateTo(pageId)                   // Handle page transitions
+```
+
+## Features in Detail
+
+### Main Page
+- Animated background
+- Glowing title effect
+- Navigation button
 
 ### Gallery Page
+- Interactive timeline
+- Photo memories with dates
+- Location details
+- Smooth transitions
 
-- **File**: 
+### Quiz Section
+- 5 multiple-choice questions
+- Score tracking
+- Conditional prize access
+- Modal feedback system
 
-gallery.html
+### Prize Selection
+- 4 prize options
+- Interactive selection
+- Confirmation modal
+- Prize tracking
 
-
-- **Description**: Displays a timeline of photos with dates, details, and locations, along with navigation buttons.
-
-### Quiz Page
-
-- **File**: 
-
-quiz.html
-
-
-- **Description**: Engaging quiz with multiple-choice questions, results display, and navigation to the prize selection.
-
-### Prize Page
-
-- **File**: 
-
-prizes.html
-
-
-- **Description**: Allows the user to select one prize after completing the quiz.
-
-### Final Page
-
-- **File**: 
-
-final.html
-
-
-- **Description**: Displays a photo of the birthday person, birthday wishes, and a personal message.
+### Music Widget
+- Playlist of 4 songs
+- Playback controls
+- Persistent state
+- Mobile-responsive design
 
 ## Setup Instructions
 
-1. Clone the repository to your local machine.
-2. Open the 
+1. Clone the repository:
+```bash
+git clone https://github.com/username/birthday-website.git
+```
 
-index.html
-
- file in your web browser to view the website.
-3. Ensure all images are placed in the 
+2. Ensure proper file structure:
+   - Place images in 
 
 image
 
- directory.
+ directory
+   - Add music files to 
+
+music
+
+ directory
+   - Keep all HTML, CSS, and JS files in root
+
+3. Open 
+
+index.html
+
+ in a web browser to view the website
 
 ## Technologies Used
 
-- HTML
-- CSS
-- JavaScript
+- HTML5: Page structure and content
+- CSS3: Styling and animations
+- JavaScript: Interactive functionality
+- Audio API: Music player implementation
 
-## Detailed File Descriptions
+## Author
 
-### HTML Files
+**Muhamad Nur Arif**  
+Student ID: 41523010147
 
-- **index.html**: Main landing page with birthday wishes and navigation.
-- **gallery.html**: Gallery page with a timeline layout for photos.
-- **quiz.html**: Quiz page with multiple-choice questions.
-- **prizes.html**: Prize selection page after quiz completion.
-- **final.html**: Final page with birthday wishes and personal message.
-
-### CSS Files
-
-- **style.css**: CSS styles for the website.
-
-### JavaScript Files
-
-- **script.js**: JavaScript for navigation and quiz functionality.
-
-## Customization
-
-Feel free to customize the content and styles to make it more personal! Enjoy celebrating your loved one's birthday!
-
-## Authors
-**Developed by :**
-**Muhamad Nur Arif**
-**(41523010147)**
-
-### 🔗 Link
+### Connect with Me
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://arifsuz.vercel.app/)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/arifsuz)
 [![linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/marif8/)
