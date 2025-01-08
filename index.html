@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Birthday Laura</title>
+    <link rel="icon" href="image/laura.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Main Page -->
+    <div id="main-page" class="main-page">
+        <div>
+            <h1>Happy Birthday, Laura Janisa Azahra</h1>
+            <button onclick="navigateTo('gallery')">Next</button>
+        </div>
+    </div>
+
+    <!-- Gallery Page -->
+    <div id="gallery-page" class="gallery-page" style="display: none;">
+        <div class="heading">
+            <h1>Gallery Arif & Laura</h1>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item" id="current">
+                <h3>29 September 2023</h3>
+                <img src="image/first-date.jpg" alt="Description of image 1">
+                <p>Awal jadian aku nembak kamu pake bucket bunga yang ada barcode websitenya. Location: <br> [Universitas Mercu Buana]</p>
+            </div>
+            <div class="timeline-item" id="upcoming">
+                <h3>22 November 2023</h3>
+                <img src="image/makrab.jpg" alt="Description of image 2">
+                <p>Makrab Teknik Informatika 23. Location: <br> [Sabina Prime Hotel]</p>
+            </div>
+            <div class="timeline-item" id="current">
+                <h3>1 Januari 2024</h3>
+                <img src="image/photo-box.jpg" alt="Description of image 1">
+                <p>Awal kita photobox. Location: <br> [Blok-M Plazza]</p>
+            </div>
+            <div class="timeline-item" id="upcoming">
+                <h3>27 Februari 2024</h3>
+                <img src="image/mokopi.JPG" alt="Description of image 2">
+                <p>Pertama kali nongkrong ke mokopi. Location: <br> [Mokopi]</p>
+            </div>
+            <div class="timeline-item" id="current">
+                <h3>27 Maret 2024</h3>
+                <img src="image/bukber-ti.JPG" alt="Description of image 1">
+                <p>Kita jadi panitia bukber TI. Location: <br> [Universitas Mercu Buana]</p>
+            </div>
+            <div class="timeline-item" id="upcoming">
+                <h3>12 Juni 2024</h3>
+                <img src="image/after-hacktiv8.JPG" alt="Description of image 2">
+                <p>Setelah ikut hacktiv8 dan borong hadiah. Location: <br> [Universitas Mercu Buana]</p>
+            </div>
+            <div class="timeline-item" id="current">
+                <h3>20 Juli 2024</h3>
+                <img src="image/after-lebaran.jpeg" alt="Description of image 1">
+                <p>Ketemu habis Lebaran Idul Fitri setelah LDR. Location: <br> [Blok-M Squer]</p>
+            </div>
+            <div class="timeline-item" id="upcoming">
+                <h3>6 Agustus 2024</h3>
+                <img src="image/fkti-day-1.jpeg" alt="Description of image 2">
+                <p>Hari pertama FKTI. Location: <br> [Puncak, Bogor]</p>
+            </div>
+            <div class="timeline-item" id="current">
+                <h3>7 Agustus 2024</h3>
+                <img src="image/fkti-day-2.jpeg" alt="Description of image 1">
+                <p>Pagi yang cerah dengan sedikit drama. Location: <br> [Puncak, Bogor]</p>
+            </div>
+            <div class="timeline-item" id="upcoming">
+                <h3>8 Agustus 2024</h3>
+                <img src="image/fkti-last-day.jpeg" alt="Description of image 2">
+                <p>Malam terakhir dan beberapa jam sebelum drama hebat. Location: <br> [Puncak, Bogor]</p>
+            </div>
+            <div class="timeline-item" id="current">
+                <h3>8 September 2024</h3>
+                <img src="image/ultah-aku.jpeg" alt="Description of image 1">
+                <p>Terimakasi udah ngerayain ulang tahun aku. Location: <br> [Nako Citra 8]</p>
+            </div>
+            <div class="timeline-item" id="upcoming">
+                <h3>29 September 2024</h3>
+                <img src="image/fine-dining.jpeg" alt="Description of image 2">
+                <p>Fine dining sebagai janji ultah aku. Location: <br> [Naughtyolive, Kelapa Gading]</p>
+            </div>
+            <button onclick="navigateTo('quiz')">Next</button>
+        </div>
+    </div>
+
+    <!-- Quiz Page -->
+    <div id="quiz-page" class="quiz-page" style="display: none;">
+        <div class="quiz">
+            <div class="heading">
+                <h1>Quiz berhadiah</h1>
+            </div>
+            <div class="question">
+                <p>1. Dimana tempat pertama kali kita ketemu?</p>
+                <button onclick="selectAnswer(0, 'Mixue')">Mixue</button>
+                <button onclick="selectAnswer(0, 'Perpus-Mercu')">Perpus Mercu</button>
+                <button onclick="selectAnswer(0, 'Indomart-Rektorat')">Indomaret Rektorat</button>
+                <button onclick="selectAnswer(0, 'LP')">LP</button>
+            </div>
+            <div class="question">
+                <p>2. Dimana pertama kali aku ngeliat kamu?</p>
+                <button onclick="selectAnswer(1, 'Perpus Mercu')">Perpus Mercu</button>
+                <button onclick="selectAnswer(1, 'LP')">LP</button>
+                <button onclick="selectAnswer(1, 'IT-Day')">IT Day</button>
+                <button onclick="selectAnswer(1, 'Mabim')">Mabim</button>
+            </div>
+            <div class="question">
+                <p>3. Tanggal berapa pertama kali aku ngeDM kamu?</p>
+                <button onclick="selectAnswer(2, '15-September')">15 September</button>
+                <button onclick="selectAnswer(2, '14-September')">14 September</button>
+                <button onclick="selectAnswer(2, '14-Agustus')">14 Agustus</button>
+                <button onclick="selectAnswer(2, '29-September')">29 September</button>
+            </div>
+            <div class="question">
+                <p>4. Dimana tempat first date setelah jadian?</p>
+                <button onclick="selectAnswer(3, 'Mixue')">Mixue</button>
+                <button onclick="selectAnswer(3, 'Nonton-di-Sedayu')">Nonton di Sedayu</button>
+                <button onclick="selectAnswer(3, 'Lekker')">Lekker</button>
+                <button onclick="selectAnswer(3, 'Indomaret-Rektorat')">Indomaret Rektorat</button>
+            </div>
+            <div class="question">
+                <p>5. Dimana tempat aku nembak kamu?</p>
+                <button onclick="selectAnswer(4, 'Perpus-Mercu')">Perpus Mercu</button>
+                <button onclick="selectAnswer(4, 'LP')">LP</button>
+                <button onclick="selectAnswer(4, 'Belakang-Sasana')">Belakang Sasana</button>
+                <button onclick="selectAnswer(4, 'Indomaret-Rektorat')">Indomaret Rektorat</button>
+            </div>
+            <button onclick="submitQuiz()">Submit Answers</button>
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <p id="modal-message"></p>
+                    <button id="modal-button" onclick="closeModal()">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Prizes Page -->
+    <div id="prizes-page" class="prizes-page">
+        <div class="container">
+            <h1>Hadiah Buat Laura!</h1>
+            <p>Selamat karena kamu berhasil menjawab pertanyaan dengan benar, nih aku kasi hadiah buat kamu pilih:</p>
+            <div class="prize-selection">
+                <div class="prize" onclick="selectPrize('Sushi Go!')">
+                    <h2>Gift 1</h2>
+                    <img src="image/sushi-go.png" alt="Gift 1">
+                    <p>Traktir makan di sushi go</p>
+                </div>
+                <div class="prize" onclick="selectPrize('CO Shopee')">
+                    <h2>Gift 2</h2>
+                    <img src="image/shopee.png" alt="Gift 2">
+                    <p>CO 1 Barang di keranjang shopee kamu</p>
+                </div>
+                <div class="prize" onclick="selectPrize('Request Gift')">
+                    <h2>Gift 3</h2>
+                    <img src="image/request.png" alt="Gift 3">
+                    <p>Request 1 barang yang kamu pengen</p>
+                </div>
+                <div class="prize" onclick="selectPrize('Gift Random')">
+                    <h2>Gift 4</h2>
+                    <img src="image/tanda-tanya.png" alt="Gift 4">
+                    <p>Terima hadiah random dari aku</p>
+                </div>
+            </div>
+        </div>
+        <div id="modal-prizes" class="modal-prizes">
+            <div class="modal-content-prizes">
+                <p id="modal-message-prizes"></p>
+                <button id="modal-button-prizes" class="button-prizes">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final Page -->
+    <div id="final-page" class="final-page" style="display: none;">
+        <img src="image/laura.jpg" alt="Photo">
+        <h1>Happy Birthday Laura!</h1>
+        <p>Selamat ulang tahun. Aku doakan ulang tahunmu semanis kue dan tahun yang akan datang dipenuhi dengan banyak kegembiraan seperti peranmu di hidupku.</p>
+    </div>
+
+    <!-- Music Widget -->
+    <div id="music-widget-icon" class="music-widget-icon" onclick="toggleMusicWidget()">🎵</div>
+    <div id="music-widget" class="music-widget">
+        <audio id="audio-player">
+            <source id="audio-source" src="music/Jamrud-Selamat-Ulang-Tahu.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <div class="music-controls">
+            <button onclick="previousMusic()">⏮️</button>
+            <button onclick="togglePlayPause()">⏯️</button>
+            <button onclick="nextMusic()">⏭️</button>
+        </div>
+        <select id="music-selector" onchange="changeMusic()">
+            <option value="music/Jamrud-Selamat-Ulang-Tahu.mp3">Jamrud - Selamat Ulang Tahun</option>
+            <option value="music/ANDMESH-ANUGERAH-TERINDAH.mp3">ANDMESH - ANUGERAH TERINDAH</option>
+            <option value="music/Jaz-Bersamamu.mp3">Jaz - Bersamamu</option>
+            <option value="music/Kita-Bikin-Romantis-Maliq&D'Essentials.mp3">Kita Bikin Romantis - Maliq & D'Essentials</option>
+        </select>
+    </div>
+</body>
+</html>
