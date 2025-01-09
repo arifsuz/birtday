@@ -114,6 +114,10 @@ window.addEventListener('load', () => {
     audioPlayer.load();
     if (isPlaying) {
         audioPlayer.play();
+    } else {
+        audioPlayer.play();
+        isPlaying = true;
+        localStorage.setItem('isPlaying', isPlaying);
     }
 });
 
